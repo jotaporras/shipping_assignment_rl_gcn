@@ -1,0 +1,12 @@
+program: gnn_sweep.py
+method: grid
+metric:
+  name: mean_reward_per_ep
+  goal: maximize
+parameters:
+  learning_rate:
+    values: [1e-4,3e-4,6e-4,9e-4,9.5e-4,1e-3,3e-3,6e-3,9e-3,9.5e-3,9.7e-3,1e-2,2e-2,3e-2,4.5e-2,5.5e-2,6e-2]
+  gamma:
+    values: [0.8]
+  sched_discount:
+    values: [0.999992]

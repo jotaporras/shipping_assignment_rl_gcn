@@ -1,0 +1,29 @@
+# Further sweep into learning rates, now with fewer episodes.
+program: gnn_tuning_sweep.py
+method: grid
+metric:
+  name: reward
+  goal: maximize
+parameters:
+  learning_rate:
+    values: [9e-3,2.5e-2,5e-2,1e-1,5e-1]
+  gamma: # still not sure about best
+    #values: [0.8,0.85,0.9]
+    value: 0.8
+  gnn_hidden_units:
+    value: 1024
+  reward_function:
+    value: negative_log_cost_minus_log_big_m_units
+  # 20C5W1K1F2V: The middle sized environment
+  num_dcs:
+    value: 5
+  num_customers:
+    value: 20
+  num_commodities:
+    value: 1
+  orders_per_day:
+    value: 1
+  dcs_per_customer:
+    value: 2
+  max_episodes:
+    value: 150

@@ -1,0 +1,56 @@
+# To test on the Kabre cluster.
+program: python/src/experiments_seminar_2/final_experiments_v1/final_experiments_runner_v1.py
+method: grid
+metric:
+  name: reward.mean
+  goal: maximize
+parameters:
+  # env spec.
+  agent:
+    value: "random_valid"
+  project_name:
+    value: "deleteme_gcp_parallel_test"
+  env_codename:
+    value: "64C8W16K5F3V"
+  run_iteration_num:
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+  ################
+  # Fixed params
+  ################
+  max_episodes:
+    value: 250
+  episode_length:
+    value: 30
+  demand_mean:
+    value: 600
+  demand_var:
+    value: 150
+  big_m_factor:
+    value: 10000
+  version:
+    value: "v2"
+  order_generator:
+    value: "biased"
+  reward_function:
+    value: "negative_log_cost_minus_log_big_m_units"
+  # hps
+  replay_size:
+    value: 30
+  warm_start_steps:
+    value: 30
+  batch_size:
+    value: 32
+  gamma:
+    value: 0.8
+  gnn_hidden_units:
+    value: 1024
+  lr:
+    value: 0.009
+  eps_end:
+    value: 0.01
+  eps_start:
+    value: 0.01
+  sync_rate:
+    value: 30
+  lambda_lr_sched_discount:
+    value: 0.999992

@@ -1,0 +1,19 @@
+program: gnn_tuning_sweep.py
+method: grid
+metric:
+  name: reward
+  goal: maximize
+parameters:
+  learning_rate:
+    values: [3e-3,3e-4,6e-3,6e-6]
+  gamma:
+    values: [0.8,0.85,0.9]
+  sched_discount:
+    values: [0.999992]
+  gnn_hidden_units:
+    values: [128,64,32,16]
+  reward_function:
+    values:
+      - negative_log_cost_minus_log_big_m_units
+      - negative_log_cost_or_bigm_penalty
+      - negative_if_bigm_else_denom_cost

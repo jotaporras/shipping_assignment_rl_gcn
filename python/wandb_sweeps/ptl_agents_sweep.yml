@@ -1,0 +1,17 @@
+program: src/experiments_v2/ptl_agents.py
+method: grid
+metric:
+  name: mean_reward_per_ep
+  goal: maximize
+parameters:
+  lr:
+    values: [5e-3,1e-4,5e-2,1e-2]
+  gamma:
+    values: [0.2,0.5,0.6,0.7,0.8,0.9,0.95,0.99]
+command:
+  - ${env}
+  - ${echo "conda activate ts_mcfrl"}
+  - PYTHONPATH=./src
+  - ${interpreter}
+  - ${program}
+  - ${args}
