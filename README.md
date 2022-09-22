@@ -1,8 +1,9 @@
 # Shipping Assignment RL GCN
 
 ## Overview
-This repository is a companion to the thesis titled "A Deep Reinforcement Learning Approach to Multistage Stochastic Network Flows for Distribution Problems. 
-It contains the code for a RL environment that simulates Shipping Point Assignment (SPA), as well as the code to run the suite of experiments.
+This repository is a companion to the thesis titled "A Deep Reinforcement Learning Approach to Multistage Stochastic Network Flows for Distribution Problems. It contains the code for a RL environment that simulates Shipping Point Assignment (SPA), as well as the code to run the suite of experiments.
+
+The thesis work, including experiment results can be found [here](https://github.com/jotaporras/shipping_assignment_rl_gcn/blob/main/Javier%20Porras%20Tesis%20para%20Biblioteca%20con%20Portada%20(1).pdf).
 
 
 ## Environment setup
